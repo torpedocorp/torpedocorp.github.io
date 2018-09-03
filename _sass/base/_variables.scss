@@ -1,7 +1,11 @@
+
 // Typography
-$font-family-main: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$font-family-headings: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$font-size: 1.25em;
+$base-font-size: 14px !default;
+$bold-font-weight: bold !default;
+$font-family: 'Nanum Gothic', 'Merriweather', 'PT Serif', Georgia, 'Times New Roman', serif !default;
+$line-height: 1.5 !default;
+$heading-font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif !default; $heading-font-weight: 900 !default;
+$heading-line-height: 1.25 !default;
 
 
 // Padding
