@@ -1,10 +1,11 @@
 ---
 layout: post
-title: markdown 테이블 샘플 
+title: markdown 샘플 
 tags: [A Tag, Test, Lorem, Ipsum]
 excerpt_separator: <!--more-->
 ---
 
+markdown 테이블 샘플 
 
 | Tables   |      Are      |  Cool |
 |----------|:-------------:|------:|
@@ -14,3 +15,7 @@ excerpt_separator: <!--more-->
 
 
 <!--more-->
+
+markdown 링크 샘플 
+
+[NAVER](https://naver.com "링크 설명(title)을 작성하세요.")
