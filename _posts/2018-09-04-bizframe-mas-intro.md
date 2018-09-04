@@ -25,7 +25,7 @@ Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라�
 
 ## architecture
 
- ![bizframe-mas 아키텍처](images/architecture.png)
+ ![bizframe-mas 아키텍처](/images/architecture.png)
 
 
  
