@@ -1,7 +1,7 @@
 ---
 layout: post
-title: bizframe-mas 프로젝트 소개 
-tags: [A Tag, Test, bizframe, mas]
+title: Bizframe-mas 프로젝트 소개 
+tags: [bizframe, mas, camel, ESB, msa]
 excerpt_separator: <!--more-->
 ---
 
@@ -10,8 +10,9 @@ bizframe-mas는 어플리케이션을 실행 관리하기 위한 어플리케이
 bizframe-mas를 이용하여 일반적인 JAVA 프로그램을 구동하여 관리할 수도 있으며 
 서버프로그램,  Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라우팅 엔진을 구동하여 ESB 서버로 사용할 수 있습니다.    
 
+
  
-## Feature 
+## 1. 특징  
 
   * JVM 기반하에서 application 구동 및 관리를 위한 서버
   * Application 초기화/종료 액션 가능
@@ -25,13 +26,13 @@ bizframe-mas를 이용하여 일반적인 JAVA 프로그램을 구동하여 관�
 
 
 
-## Architecture
+## 2. 아키텍처 
 
  ![bizframe-mas 아키텍처](/images/bizframe-mas-intro/architecture.png)
 
   
   
-## 어플리케이션 유형 
+## 3. 어플리케이션 유형 
 
  mas의 어플리케이션은 기본 어플리케이션, 서비스 어플리케이션, 라우트 어플리케이션으로 나누어 집니다.  
  각각의 어플리케이션은 해당 인터페이스를 구현함으로써 작성할 수 있습니다.  
@@ -66,13 +67,14 @@ public interface Routable {
 
   
   
-## 어플리케이션 상태 
+## 4. 어플리케이션 상태 
 
 
 ![어플리케이션 상태 ](/images/bizframe-mas-intro/application-status.png)
 
 
 
-## 어플리케이션 배치 구조
+## 5. 어플리케이션 배치 구조
+
 
 ![어플리케이션 상태 ](/images/bizframe-mas-intro/application-deploy.png)
