@@ -6,7 +6,7 @@ feature-img: "assets/img/pexels/circuit.jpeg"
 tags: [About, Archive]
 ---
 
-ÅäÇÇµµ´Â ±â¼úÁöÇâ È¸»çÀÔ´Ï´Ù. 
+í† í”¼ë„ëŠ” ê¸°ìˆ ì§€í–¥ íšŒì‚¬ì…ë‹ˆë‹¤. 
 
-È¨ÆäÀÌÁö  [ÅäÇÇµµ](http://www.torpedo.co.kr)
-°ø°³¼Ò½º ÀúÀå¼Ò [github](https://www.github.com/torpedocorp)
+í™ˆí˜ì´ì§€  [í† í”¼ë„](http://www.torpedo.co.kr)
+ê³µê°œì†ŒìŠ¤ ì €ì¥ì†Œ [github](https://www.github.com/torpedocorp)
