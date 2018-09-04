@@ -26,10 +26,13 @@ Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라�
 
  ![bizframe-mas 아키텍처](/images/bizframe-mas-intro/architecture.png)
 
-
-## 어플리케이션 유형 
+  
+  
+### 어플리케이션 유형 
 
  mas의 어플리케이션은 기본 어플리케이션, 서비스 어플리케이션, 라우트 어플리케이션으로 나누어 집니다.  
+ 각각의 어플리케이션은 해당 인터페이스를 구현함으로써 작성할 수 있습니다.  
+ 
   
  ![어플리케이션 ](/images/bizframe-mas-intro/application-type.png)
 
@@ -37,25 +40,30 @@ Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라�
 
  - 기본 인터페이스 
 ```java
- public interface Application {
- 	public void init(ApplicationContext context) throws ApplicationException;
- 	public void destroy(ApplicationContext context) throws pplicationException;
+public interface Application {
+		public void init(ApplicationContext context) throws ApplicationException;
+		public void destroy(ApplicationContext context) throws pplicationException;
  } 
 ```
 
  - 서비스 인터페이스 
 ```java
 public interface Serviceable {
-	public void start() throws Exception;
-	public void stop() throws Exception;
+		public void start() throws Exception;
+		public void stop() throws Exception;
 }
 ```
 
  - 라우트 인터페이스 
 ```java
 public interface Routable {
-	public void onMessage(Exchange exchange) throws Exception;
+		public void onMessage(Exchange exchange) throws Exception;
 }
 ```
 
+
+### 어플리케이션 상태 
+
+
+![어플리케이션 상태 ](/images/bizframe-mas-intro/application-status.png)
 
