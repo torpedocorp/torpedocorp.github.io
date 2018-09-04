@@ -5,15 +5,13 @@ tags: [A Tag, Test, bizframe, mas]
 excerpt_separator: <!--more-->
 ---
 
-# bizfrmae mas 소개  
-
 bizframe-mas는 어플리케이션을 실행 관리하기 위한 어플리케이션 컨테이너입니다.  
 <!--more-->
 bizframe-mas를 이용하여 일반적인 JAVA 프로그램을 구동하여 관리할 수도 있으며 
 Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라우팅 엔진을 구동하여 ESB 서버로 사용할 수 있습니다.    
 
  
-## feature 
+## Feature 
 
  * JVM 기반하에서 application 구동 및 관리를 위한 서버
  * Application 초기화/종료 액션 가능
@@ -24,9 +22,16 @@ Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라�
  * 커맨드라인 명령 수행 
 
 
-## architecture
+## Architecture
 
- ![bizframe-mas 아키텍처](/images/architecture.png)
+ ![bizframe-mas 아키텍처](/images/bizframe-mas-intor/architecture.png)
+
+
+## 어플리케이션 유형 
+
+ mas의 어플리케이션은 기본 어플리케이션, 서비스 어플리케이션, 라우트 어플리케이션으로 나누어 집니다.  
+  
+ ![어플리케이션 ](/images/bizframe-mas-intro/application-type.png)
 
 
  
