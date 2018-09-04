@@ -1,15 +1,12 @@
 ---
 layout: post
-title: jolokia와 hawtio 사용해보기 
-tags: [jolokia, hawtio]
+title: Camel ESB 모니터링을 위한 jolokia와 hawtio(소개)
+tags: [jolokia, hawtio, 모니터링]
 excerpt_separator: <!--more-->
 ---
 
-# hawtio와 jolokia
 
-
-
-## hawtio와 jolokia
+## hawtio - jolokia - JMX
 
 ![](http://3.bp.blogspot.com/-DFtaudeSNxo/UkmADhuA9HI/AAAAAAAAA3w/PbOCNOwEaJ4/s1600/Karaf_JMX.png)
 
