@@ -1,3 +1,8 @@
+---
+layout: post
+title: File Component 1
+---
+
 Apache Camel - File component (1)
 =============================
 
