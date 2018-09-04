@@ -34,15 +34,28 @@ Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라�
  ![어플리케이션 ](/images/bizframe-mas-intro/application-type.png)
 
 
+
+ - 기본 인터페이스 
 ```java
- 
  public interface Application {
- 		public void init(ApplicationContext context) throws ApplicationException;
- 		public void destroy(ApplicationContext context) throws pplicationException;
+ 	public void init(ApplicationContext context) throws ApplicationException;
+ 	public void destroy(ApplicationContext context) throws pplicationException;
  } 
 ```
 
-source 
+ - 서비스 인터페이스 
+```java
+public interface Serviceable {
+	public void start() throws Exception;
+	public void stop() throws Exception;
+}
+```
 
-<script src="https://torpedocorp.github.com/bizframe-mas/src/main/java/kr/co/bizframe/mas/Application.java"></script>
+ - 라우트 인터페이스 
+```java
+public interface Routable {
+	public void onMessage(Exchange exchange) throws Exception;
+}
+```
+
 
