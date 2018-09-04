@@ -7,6 +7,7 @@ excerpt_separator: <!--more-->
 
 makrdown 샘플입니다. 
 
+<!--more-->
 
 markdown 테이블 샘플 
 
@@ -18,7 +19,6 @@ markdown 테이블 샘플
 | col 3 is | right-aligned |    $1 |
 
 
-<!--more-->
 
 markdown 링크 샘플 
 
