@@ -1,11 +1,11 @@
 ---
 layout: post
-title: bizframe mas 소개 
+title: bizframe-mas 소개 
 tags: [A Tag, Test, bizframe, mas]
 excerpt_separator: <!--more-->
 ---
 
-bizfrmae mas 소개
+# bizfrmae mas 소개
 
 bizframe-mas는 어플리케이션을 실행 관리하기 위한 어플리케이션 컨테이너입니다.  
 bizframe-mas를 이용하여 일반적인 JAVA 프로그램을 구동하여 관리할 수도 있으며 
@@ -25,7 +25,7 @@ Tomcat, Jetty와 같은 웹어플리케이션 혹은 apache-camel과 같은 라�
 
 ## architecture
 
- ![bizframe-mas 아키텍처](../images/architecture.png)
+ ![bizframe-mas 아키텍처](images/architecture.png)
 
 
  
