@@ -44,7 +44,7 @@ ex) moveFailed=/error/${file:name:noext}
 ex) javafrom("file://inbox?preMove=inprogress&move=.done")
 
 
-[route_fileComponent_1.xml](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/route_fileComponent_1.xml)
+[route_fileComponent_1.xml](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/routeXML/route_fileComponent_1.xml)
 
 -----------------------------------------------------------------
 ### noop, idempotent
@@ -61,6 +61,8 @@ ex) javafrom("file://inbox?preMove=inprogress&move=.done")
 그러나 application이 실행될 때마다 process는 다시 시작하게 되고, 중복된 파일이 전송된다. 왜냐햐면
 file consumer는 memory를 기반으로 한 Idempotent consumer를 이용하기 때문에 프로그램이 실행될
 때마다 모든 파일은 한번씩 process 된다.
+
+[route_fileComponent_2.xml](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/routeXML/route_fileComponent_2.xml)
 
 #### 2. idempotent
 * [default] idempotent=false
