@@ -11,7 +11,7 @@
     <camelContext id="camel"  xmlns="http://camel.apache.org/schema/spring">     	
 		<route>
 			<!-- using choice, when, otherwise -->
-			<from uri="file:d:/camel/src?move=done&amp;moveFailed=failed&amp&amp;delay=5000" />
+			<from uri="file:d:/camel/src?move=done&amp;move&amp;Failed=failed&amp;delay=5000" />
 			<choice>
 				<when>
 					<!-- if fileName is starts with 'sample'(ex)sampleContext.txt, sample123.file), <when> is processing -->
