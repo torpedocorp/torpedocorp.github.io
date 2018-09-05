@@ -44,7 +44,7 @@ ex) moveFailed=/error/${file:name:noext}
 ex) javafrom("file://inbox?preMove=inprogress&move=.done")
 
 
-[torpedocorp.github.io/_posts/route_fileComponent_1.xml](torpedocorp.github.io/_posts/route_fileComponent_1.xml)    
+[route_fileComponent_1.xml](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/route_fileComponent_1.xml)
 
 -----------------------------------------------------------------
 ### noop, idempotent
