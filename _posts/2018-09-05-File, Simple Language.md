@@ -69,10 +69,10 @@ ex) if file is "d:/camel/src/test/text.txt"
 **2. operator support 양옆으로 공백이 있어야 한다. **
 
 * **==, =~, >, >=, <, <=, != ....**
-* **contains, not contains ** : rightValue를 포함하느냐/포함하지않느냐
+* **contains, not contains** : rightValue를 포함하느냐/포함하지않느냐
 * **in, not in** : 원하는 element가 list에 존재하느냐/존재하지 않느냐 (list에서 각 element는 ,로 구분)
 * **starts with** : leftValue가 rightValue로 시작하는지에 대한 testing
-* ** ends with** : leftValue가 rightValue로 끝나는지에 대한 testing
+* **ends with** : leftValue가 rightValue로 끝나는지에 대한 testing
 
 ## 참고 자료
 * [Apache Camel - File Expression Language](http://camel.apache.org/file-language.html)
