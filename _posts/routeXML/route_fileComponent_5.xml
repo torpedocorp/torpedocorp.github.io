@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ 	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<bean id="jetty" class="org.apache.camel.component.jetty9.JettyHttpComponent9">
+	</bean>
+
+    <camelContext id="camel"  xmlns="http://camel.apache.org/schema/spring">     	
+		<route>
+			<!-- using choice, when, otherwise -->
+			<from uri="file:d:/camel/src?move=done&amp;moveFailed=failed&amp&amp;delay=5000" />
+			<choice>
+				<when>
+					<!-- if fileName is starts with 'sample'(ex)sampleContext.txt, sample123.file), <when> is processing -->
+					<simple>${in.header.CamelFilename} starts with 'sample'</simple>
+					<to uri="file://d:/camel/output/includeSample" />
+				</when>
+				<!-- if fileName is not starts with 'sample', <otherwise> is processing -->
+				<otherwise>
+					<to uri="file://d:/camel/output/excludeSample" />
+				</otherwise>
+			</choice>
+	    </route>
+	</camelContext>	
+ </beans>

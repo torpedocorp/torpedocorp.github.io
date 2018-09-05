@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ 	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+	<bean id="jetty" class="org.apache.camel.component.jetty9.JettyHttpComponent9">
+	</bean>
+	
+    <camelContext id="camel"  xmlns="http://camel.apache.org/schema/spring">     	
+		<route>
+			<!-- sortBy using File language(file:length) -->
+			<from uri="file:d:/camel/src1?sortBy=file:length&amp;delay=5000"/>
+			<to uri="file://d:/camel/output" />
+	    </route>
+		
+		<route>
+			<!-- sortBy using multiple groups(file:length, file:name) -->
+			<from uri="file:d:/camel/src2?sortBy=file:length;file:name&amp;delay=5000"/>
+			<to uri="file://d:/camel/output" />
+	    </route>
+		
+		<route>
+			<!-- sortBy using reverse -->
+			<from uri="file:d:/camel/src3?sortBy=reverse:file:length&amp;delay=5000"/>
+			<to uri="file://d:/camel/output" />
+	    </route>
+	</camelContext>	
+ </beans>

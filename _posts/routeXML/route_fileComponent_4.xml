@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ 	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<bean id="jetty" class="org.apache.camel.component.jetty9.JettyHttpComponent9">
+	</bean>
+	
+	<!-- Comparator 구현한 class bean -->
+	<bean id="MyFileSorter" class="kr.co.bizframe.comparator.MyFileSorter"/>
+	
+    <camelContext id="camel"  xmlns="http://camel.apache.org/schema/spring">     	
+		<route>
+			<!-- sorter using Comparator bean -->
+			<from uri="file:d:/camel/src?sorter=#MyFileSorter&amp;delay=5000" />
+			<to uri="file://d:/camel/output" />
+	    </route>
+	</camelContext>	
+ </beans>
