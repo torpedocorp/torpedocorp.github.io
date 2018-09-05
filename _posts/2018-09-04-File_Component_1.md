@@ -67,3 +67,8 @@ file consumer는 memory를 기반으로 한 Idempotent consumer를 이용하기 
 #### 2. idempotent
 * [default] idempotent=false
 * 이미 처리된 파일들은 다시 읽게 되는 걸 막기 위해서 사용
+
+
+### 참고 자료
+* [Apache Camel - File2](http://camel.apache.org/file2.html)
+
