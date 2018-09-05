@@ -15,13 +15,13 @@ Apache Camel - File Language, Simple Language
 * file:length : Long type으로 file length return (Camel 2.5부터는 file:size로 대체)
 * file:modified : Date type으로 file 최근 수정 날짜 return
 
-####1. Relative Paths
+#### 1. Relative Paths
 ex) if file is "d:/camel/src/test/text.txt"
 
 * **file:absolute** - false
 * **file:absolute.path** - d:/camel/src/test/text.txt
 * **file:ext** - txt
- : 확장자만 return
+  : 확장자만 return
 * **file:name** - test/text.txt
 * **file:name.ext** - txt
 * **file:name.noext** - test/text
@@ -31,7 +31,7 @@ ex) if file is "d:/camel/src/test/text.txt"
 * **file:path** -  src/test/text.txt
 
 
-####2. Absolute Paths
+#### 2. Absolute Paths
 ex) if file is "d:/camel/src/test/text.txt"
 
 § Relative paths와 관련하여 몇 가지만 제외하고는 동일한 값 return
@@ -64,9 +64,9 @@ ex) if file is "d:/camel/src/test/text.txt"
 * syntax : ${leftValue} [operator support] rightValue
 * rightValue는 ${ } expression, null, ' '로 묶은 String, constant value 사용할 수 있다.
 
-**§ 주의 사항**
-**1. 왼쪽에 위치할 value(leftValue)는 곡 ${ }로 묶어야 한다. **
-**2. operator support 양옆으로 공백이 있어야 한다. **
+**§ 주의 사항 **
+** 1. 왼쪽에 위치할 value(leftValue)는 곡 ${ }로 묶어야 한다. **
+** 2. operator support 양옆으로 공백이 있어야 한다. **
 
 * **==, =~, >, >=, <, <=, != ....**
 * **contains, not contains** : rightValue를 포함하느냐/포함하지않느냐
