@@ -43,6 +43,9 @@ ex) moveFailed=/error/${file:name:noext}
 * preMove와 move 같이 사용할 수 있다.
 ex) javafrom("file://inbox?preMove=inprogress&move=.done")
 
+
+[torpedocorp.github.io/_posts/route_fileComponent_1.xml](torpedocorp.github.io/_posts/route_fileComponent_1.xml)    
+
 -----------------------------------------------------------------
 ### noop, idempotent
 
