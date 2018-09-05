@@ -1,6 +1,7 @@
 ---
 layout: post
 title: File Component 2
+tags: [Camel, sortBy, sorter, when, choice, otherwise]
 ---
 
 Apache Camel - File component (2)
