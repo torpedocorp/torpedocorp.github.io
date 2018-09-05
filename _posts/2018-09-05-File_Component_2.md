@@ -41,6 +41,7 @@ code : [camel-route using sortBy.xml](https://github.com/torpedocorp/torpedocorp
 **§ sortBy와 sorter를 하나의 uri option에 같이 사용할 수 없다.**
 
 code : [camel-route using sorter - Comparator bean](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/routeXML/kr/co/bizframe/comparator/MyFileSorter.java)
+
 code : [camel-route using sorter.xml](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/routeXML/route_fileComponent_4.xml)
 
 -----------------------------------------------------------------
