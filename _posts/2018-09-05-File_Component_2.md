@@ -61,3 +61,9 @@ code : [camel-route using sorter.xml](https://github.com/torpedocorp/torpedocorp
 code : [camel-route using choice, when, otherwise.xml](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/routeXML/route_fileComponent_5.xml)
 
 
+
+###참고 자료
+* [Apache Camel - File2](http://camel.apache.org/file2.html)
+* [Apache Camel - Content Based Router](http://camel.apache.org/content-based-router.html)
+
+
