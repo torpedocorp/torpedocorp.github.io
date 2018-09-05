@@ -4,7 +4,7 @@ title: File, Simple Language
 tags: [Camel, file language, simple language]
 ---
 
-Apache Camel - File Language 〮 Simple Language
+Apache Camel - File Language, Simple Language
 =============================
 ## File Language
 
