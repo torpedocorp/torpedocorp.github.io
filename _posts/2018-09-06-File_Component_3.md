@@ -56,14 +56,7 @@ public class [method 이름] implements GenericFileter{
 
 ##### 2. route.xml [Server(Receiver) 시점]
 * File Component의 fileName option을 이용해 file 이름 지정
-```xml
-<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-	<route>
-    	<from uri="jetty:http://localhost:9999/myService/" />
-        <to uri="file://d:camel/output?fileName=${in.header.[Sender에서 지정한 headername]}" />
-    </route>
-</camelContext>
-```
+
 
 
 ### 참고 자료
