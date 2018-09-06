@@ -22,18 +22,8 @@ public class [method 이름] implements GenericFileter{
 }
 ```
 
-
 * route에서 bean을 사용할 때는 **#** annotation 사용한다.
-```xml
-<bean id="[bean 이름]" class="bean으로 만들 filter java class 위치(경로)" />
 
-<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
-	<route>
-    	<from uri="file:d/camel/src?filtr=#[bean id]"&amp;delay=5000" />
-        <to uri="file://d:camel/output" />
-    </route>
-</camelContext>
-```
 
 -----------------------------------------------------------------
 ### org.apache.camel.component.file.GenericFile
