@@ -6,6 +6,10 @@ tags: [camel, custom, component, dsl, otherwise]
 APACHE CAMEL CUSTOM COMPONENT
 =============================
 
+How to writing camel custom components and downloading sample camel custom componet elipse project
+
+
+<!--more-->
 - Contents
 	
 	1. Writing Component
@@ -18,10 +22,10 @@ APACHE CAMEL CUSTOM COMPONENT
 
 	[sample-project.zip](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component.zip)
 
-
-
+<!--more-->
 
 ----------
+
 
 **Writing Component**
 
@@ -201,7 +205,7 @@ APACHE CAMEL CUSTOM COMPONENT
 		파일 내용 class=kr.co.torpedo.camel.sample.component.SampleComponent
 
 	
-![Alt text](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component-img1.png)
+![그림 이미지](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component-img1.png)
 
 
 
