@@ -18,11 +18,10 @@ How to writing camel custom components and downloading sample camel custom compo
 	
 
 * Download Sample project
+
 	[sample-project.zip](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component.zip)
 
 <!--more-->
-
-----------
 
 
 ###Writing Component
@@ -192,7 +191,6 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-----------
 
 
 ###Deploying Component
@@ -207,8 +205,6 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-
-----------
 
 ###Configure Endpoint
 		
@@ -233,7 +229,7 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-----------
+
 
 ###Run DSL and Log
 	
