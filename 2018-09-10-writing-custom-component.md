@@ -9,9 +9,7 @@ APACHE CAMEL CUSTOM COMPONENT
 
 How to writing camel custom components and downloading sample camel custom componet elipse project
 
-
-<!--more-->
-- Contents
+* Contents
 	
 	1. Writing Component
 	2. Deploying Component
@@ -19,16 +17,13 @@ How to writing camel custom components and downloading sample camel custom compo
 	4. Run DSL and Log
 	
 
-- Download Sample project
-
+* Download Sample project
 	[sample-project.zip](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component.zip)
 
 <!--more-->
 
-----------
 
-
-**Writing Component**
+###Writing Component
 
 1. SampleComponent.java
 
@@ -195,10 +190,9 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-----------
 
 
-**Deploying Component**
+###Deploying Component
 
 	서비스 파일 작성 
 
@@ -211,9 +205,7 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-----------
-
-**Configure Endpoint**
+###Configure Endpoint
 		
 	camel-route.xml
 
@@ -236,11 +228,11 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-----------
 
-**Run DSL and Log** 
+
+###Run DSL and Log
 	
-**Run DSL**
+####Run DSL
 	
 		package kr.co.torpedo.camel.sample.component;
 
@@ -263,15 +255,13 @@ How to writing camel custom components and downloading sample camel custom compo
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			}
-			
-		
+			}		
 		}
 
 
 
 
-**Run DSL log**
+####Run DSL log
 
 	9월 10, 2018 1:39:19 오후 org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
 	정보: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2f333739: startup date [Mon Sep 10 13:39:19 KST 2018]; root of context hierarchy
