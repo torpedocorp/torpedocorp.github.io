@@ -7,7 +7,9 @@ excerpt_separator: <!--more-->
 APACHE CAMEL CUSTOM COMPONENT
 =============================
 
-How to writing camel custom components and downloading sample camel custom componet elipse project
+How to writing camel custom components and download sample camel custom componet elipse project
+
+<!--more-->
 
 * Contents
 	
@@ -21,11 +23,12 @@ How to writing camel custom components and downloading sample camel custom compo
 
 	[sample-project.zip](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component.zip)
 
-<!--more-->
 
 
-###Writing Component
+----------
 
+
+#Writing Component#
 1. SampleComponent.java
 
 	
@@ -193,7 +196,7 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-###Deploying Component
+# Deploying Component #
 
 	서비스 파일 작성 
 
@@ -201,12 +204,14 @@ How to writing camel custom components and downloading sample camel custom compo
 		파일 내용 class=kr.co.torpedo.camel.sample.component.SampleComponent
 
 	
-![그림 이미지](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component-img1.png)
+![](./2018-09-10-writing-custom-component-img1.png)
+
+
+----------
 
 
 
-
-###Configure Endpoint
+# Configure Endpoint #
 		
 	camel-route.xml
 
@@ -231,9 +236,9 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-###Run DSL and Log
+# Run DSL and Log #
 	
-####Run DSL
+**Run DSL**
 	
 		package kr.co.torpedo.camel.sample.component;
 
@@ -261,8 +266,7 @@ How to writing camel custom components and downloading sample camel custom compo
 
 
 
-
-####Run DSL log
+**Run DSL log**
 
 	9월 10, 2018 1:39:19 오후 org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
 	정보: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2f333739: startup date [Mon Sep 10 13:39:19 KST 2018]; root of context hierarchy
