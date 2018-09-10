@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 APACHE CAMEL CUSTOM COMPONENT
 =============================
 
-How to writing camel custom components and download sample camel custom componet elipse project
+How to writing camel custom components and download sample camel custom componet
 
 <!--more-->
 
