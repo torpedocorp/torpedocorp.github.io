@@ -27,8 +27,7 @@ How to writing camel custom components and download sample camel custom componet
 
 ----------
 
-
-#Writing Component#
+# Writing Component #
 1. SampleComponent.java
 
 	
@@ -194,6 +193,8 @@ How to writing camel custom components and download sample camel custom componet
 
 
 
+----------
+
 
 
 # Deploying Component #
@@ -234,6 +235,8 @@ How to writing camel custom components and download sample camel custom componet
 
 
 
+
+----------
 
 
 # Run DSL and Log #
