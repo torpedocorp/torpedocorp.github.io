@@ -175,6 +175,8 @@
 
 
 
+
+
 ----------
 
 
@@ -187,6 +189,9 @@
 
 	
 ![Alt text](https://github.com/torpedocorp/torpedocorp.github.io/blob/master/_posts/2018-09-10-writing-custom-component-img1.png)
+
+
+
 
 ----------
 
