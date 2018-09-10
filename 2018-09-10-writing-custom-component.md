@@ -2,6 +2,7 @@
 layout: post
 title: Camel custom component
 tags: [camel, custom, component, dsl, otherwise]
+excerpt_separator: <!--more-->
 ---
 APACHE CAMEL CUSTOM COMPONENT
 =============================
