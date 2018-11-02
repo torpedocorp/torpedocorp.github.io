@@ -26,6 +26,7 @@ Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 
 1. Global
 * \<camelContext>에 작성하여 사용한다.
 * Global 범위로 적용하게 되면 \<camelContext> 안에 존재하는 모든 \<route>에서 정의한 error handler를 사용할 수 있다.
+
 ```
 <camelContext xmlns="http://camel.apache.org/schema/spring" errorHandlerRef="bizframeErr">
   <errorHandler id="bizframeErr" type="DefaultErrorHandler">
