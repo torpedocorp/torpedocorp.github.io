@@ -45,6 +45,7 @@ Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 
 2. Route
 * \<route> 구문에 적용하여 사용한다.
 * Global 범위와 달리, 모든 route에서 사용할 수 없고 지정한 하나의 route에서만 사용할 수 있다.
+
 ```
 <camelContext xmlns="http://camel.apache.org/schema/spring" errorHandlerRef="bizframeErr">
   <errorHandler id="bizframeErr" type="DefaultErrorHandler">
@@ -61,4 +62,5 @@ Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 
   </route>
 </camelContext>
 ```
+
 § ```id="first"```라는 route에만 error handler를 설정하였다. 이 말은,  ```id="first"```인 route에는 ```"bizframeErr"``` error handler를 사용할 수 있지만, ```id="second"```인 route에서는 ```bizframeErr``` error handler를 사용할 수 없다는 것과 같다. 만약 error handler를 사용하고 싶다면 global 단위로 설정하거나, 따로 ```"second"``` route에 error handler를 설정해주어야 한다.
