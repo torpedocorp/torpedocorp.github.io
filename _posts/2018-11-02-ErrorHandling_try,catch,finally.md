@@ -4,7 +4,7 @@ title: Error Handling - Try/Catch/Finally
 tags: [Camel, Error Handling, <doTry>, <doCatch>, <doFinally>]
 ---
 
-### Apache Camel - Error Handling (2)
+### Error Handling - Try/Catch/Finally
 
 ### Error handler 종류
 1. Try/Catch/Finally
