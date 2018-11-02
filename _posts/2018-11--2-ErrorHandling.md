@@ -17,11 +17,11 @@ tags: [Camel, Error Handling]
 ![irrecoverable_error](torpedocorp.github.io/_posts/irrecoverable_error.png)
 * Rocoverable error와 다르게, 전송 실패가 나온 뒤 다시 전송 시도해도 실패가 나오는 error
 
-<br/>
+
 #### 2. Error가 발생하는 시점
 Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 **processing** 하는 과정에서 error가 발생할 수 있다.
 
-<br/>
+
 #### 3. Error Handling 범위
 1. Global
 * \<camelContext>에 작성하여 사용한다.
