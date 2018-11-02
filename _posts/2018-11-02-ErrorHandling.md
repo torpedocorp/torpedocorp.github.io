@@ -10,7 +10,7 @@ tags: [Camel, Error Handling]
 #### 1. Error 종류
 1. Recoverable error
 
-![recoverable_error](.//recoverable_error.png)
+![recoverable_error](./recoverable_error.png)
 
 * 일시적인 오류
 * 전송 실패가 한번 나왔다하더라도 좀 더 시간이 흐른 뒤 다시 시도했을 때는 성공할 error를 뜻한다.
