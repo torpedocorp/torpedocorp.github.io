@@ -3,12 +3,12 @@
 
 #### 1. Error 종류
 1. Recoverable error
-![recoverable_error](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/recoverable_error.png)
+![recoverable_error](torpedocorp.github.io/_posts/recoverable_error.png)
 * 일시적인 오류
 * 전송 실패가 한번 나왔다하더라도 좀 더 시간이 흐른 뒤 다시 시도했을 때는 성공할 error를 뜻한다.
 
 2. Irrecoverable error가
-![irrecoverable_error](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/irrecoverable_error.png)
+![irrecoverable_error](torpedocorp.github.io/_posts/irrecoverable_error.png)
 * Rocoverable error와 다르게, 전송 실패가 나온 뒤 다시 전송 시도해도 실패가 나오는 error
 
 <br/>
