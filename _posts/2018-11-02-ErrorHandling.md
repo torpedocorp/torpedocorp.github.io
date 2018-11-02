@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Error Handling(1)
+title: Error Handling (1)
 tags: [Camel, Error Handling]
 ---
 
