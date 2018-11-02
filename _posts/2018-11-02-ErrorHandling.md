@@ -27,7 +27,7 @@ Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 
 
 
 #### 3. Error Handling 범위
-1. Global
+§ Global
 * \<camelContext>에 작성하여 사용한다.
 * Global 범위로 적용하게 되면 \<camelContext> 안에 존재하는 모든 \<route>에서 정의한 error handler를 사용할 수 있다.
 
@@ -46,7 +46,7 @@ Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 
 
 * camelContext에 ```errorHandlerRef="bizframeErr"```라고 정의하였다. 이건 사용자가 error handler를 사용하기 위해서 정의한 bizframeErr를 camelContext 안에 존재하는 모든 routes에서 사용할 수 있도록 설정하겠다! 하는 것이다.
 
-2. Route
+§ Route
 * \<route> 구문에 적용하여 사용한다.
 * Global 범위와 달리, 모든 route에서 사용할 수 없고 지정한 하나의 route에서만 사용할 수 있다.
 
