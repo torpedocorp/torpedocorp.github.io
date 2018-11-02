@@ -63,4 +63,4 @@ Camel에서 error가 발생할 수 있는 곳은 **routing** 할 때/message를 
 </camelContext>
 ```
 
-§ ```id="first"```라는 route에만 error handler를 설정하였다. 이 말은,  ```id="first"```인 route에는 ```"bizframeErr"``` error handler를 사용할 수 있지만, ```id="second"```인 route에서는 ```bizframeErr``` error handler를 사용할 수 없다는 것과 같다. 만약 error handler를 사용하고 싶다면 global 단위로 설정하거나, 따로 ```"second"``` route에 error handler를 설정해주어야 한다.
+* ```id="first"```라는 route에만 error handler를 설정하였다. 이 말은,  ```id="first"```인 route에는 ```"bizframeErr"``` error handler를 사용할 수 있지만, ```id="second"```인 route에서는 ```bizframeErr``` error handler를 사용할 수 없다는 것과 같다. 만약 error handler를 사용하고 싶다면 global 단위로 설정하거나, 따로 ```"second"``` route에 error handler를 설정해주어야 한다.
