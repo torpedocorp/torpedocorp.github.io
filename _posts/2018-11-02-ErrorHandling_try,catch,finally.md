@@ -6,14 +6,16 @@ tags: [Camel, Error Handling, <doTry>, <doCatch>, <doFinally>]
 
 ### Error Handling - Try/Catch/Finally
 
-### Error handler 종류
+### 1. Error handler 종류
 1. Try/Catch/Finally
 2. DefaultErrorHandler
 3. onException
 
-### Try/Catch/Finally
+### 2. Try/Catch/Finally
 * Syntax
+
 \<doTry>, \<doCatch>, \<doFinally>
+
 → 앞쪽에 'do' 접미사 붙여 사용하여 Java 문법과의 혼동, 충돌 방지
 * Camel 2.0 이후부터만 사용할 수 있다. Camel 1.x 버전에서는 Camel 1.x의 default error handler인 dead letter channel을 사용해야 한다.
 * Try/catch/finally를 사용하게 되면 기존 camel이 제공하는 error handler인 DefaultErrorHandler나 onException은 같이 사용할 수가 없다.
