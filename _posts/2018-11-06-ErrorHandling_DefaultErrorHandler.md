@@ -47,7 +47,7 @@ routing 과정에서 exception이 발생한다면, 재전송이나 error handlin
 ```
 
 * ```“myDefault”```라는 이름의 DefaultErrorHandler를 먼저 정의한다.
-* <camelContext>에서 errorHandlerRef=``”myDefault”`` 설정한다. 이 뜻은, 모든 routes에 사용할 수 있는 context-scope 범위로 설정한다는 것이다.
+* <camelContext>에서 errorHandlerRef=```”myDefault”``` 설정한다. 이 뜻은, 모든 routes에 사용할 수 있는 context-scope 범위로 설정한다는 것이다.
 * from인 ```file:d:/camel/src?delay=2000```에서 end-point인 http 통신으로 전송할 때 exception이 발생하게 되면 ```"myDefault"``` error handler가 처리하게 된다.
 * 재전송이나 error handling에 대한 어떤 option도 존재하지 않기 때문에 error 발생 후 Camel에서 정의된 대로 exception을 알려주고, 재전송은 하지 않는다.
 	
@@ -97,4 +97,4 @@ LogHandled | boolean | false | Handled exception의 logged 여부
 
 * DefaultErrorHandler를 선언하고 ```“myDefault”```라는 이름으로 정의한다.
 * 재전송에 관하여 최대 재전송 횟수는 5번, 재전송 시도에 대한 log level은 ERROR 단계로 설정한다.
-* <route>를 수행하는 도중 exception이 발생한다면 ```myDefault``` error handler에서 처리한다. 재전송을 5번까지 시도한 다음, 만약 5번 모두 실패한다면 exception을 알린 후 routing을 종료한다.
+* \<route>를 수행하는 도중 exception이 발생한다면 ```myDefault``` error handler에서 처리한다. 재전송을 5번까지 시도한 다음, 만약 5번 모두 실패한다면 exception을 알린 후 routing을 종료한다.
