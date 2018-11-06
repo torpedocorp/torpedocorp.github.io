@@ -52,6 +52,7 @@ routing 과정에서 exception이 발생한다면, 재전송이나 error handlin
 * 재전송이나 error handling에 대한 어떤 option도 존재하지 않기 때문에 error 발생 후 Camel에서 정의된 대로 exception을 알려주고, 재전송은 하지 않는다.
 	
 #### 3. Redelivery (재전송)
+
 Option | Type | Default | Description
 ---- | ---- | ---- | ----
 MaximumRedeliveries | int | 0 | 재전송 횟수 (-1 : 성공할 때까지 무한 재전송)
@@ -69,6 +70,7 @@ LogRetryAttempted | boolean | true | 재전송 시도 logged 여부
 LogExhausted | boolean | true | 모든 재전송이 실패되었을 때의 logged 여부
 LogHandled | boolean | false | Handled exception의 logged 여부
 ※ DefaultErrorHandler를 포함한 모든 error handler의 redelivey option으로 사용 가능
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
