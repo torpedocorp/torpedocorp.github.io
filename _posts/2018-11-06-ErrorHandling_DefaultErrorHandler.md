@@ -11,15 +11,15 @@ tags: [Camel, Error Handling, DefaultErrorHandler, Redelivery]
 
 Route 그림을 살펴보면 consumer, processor와 같은 nodes 사이에 channel이 존재한다.
 만약 exception이 발생한다면, exception이 발생한 곳에서 전 단계로 돌아가며 가장 가까이에 있는 channel에 exception을 알려준다.
-- If, 1번째 processor에서 error 발생?!
+- If, 1번째 processor에서 error 발생?!  
 1번째 processor 전 단계에서 가장 가까운 channel은 consumer와 processor 사이에 위치한 channel이다. 따라서 1번째 channel에서 exception return
-- If, 2번째 processor에서 error 발생?!
+- If, 2번째 processor에서 error 발생?!  
 2번째 processor 전 단계에서 가장 가까운 channel은 1번째 processor와 2번째 processor 사이에 위치한 channel이다. 따라서 2번째 channel에서 exception return
 
 #### 2. DefaultErrorHandler는 무엇인가?
 Camel 2.0의 default error handler
 * 특징
-custom error handling X, 재전송 X, dead letter queue 존재 X
+custom error handling X, 재전송 X, dead letter queue 존재 X  
 (dead letter queue는 ```Dead letter channel(Camel 1.x default error handler)```에만 존재한다)
 * default 설정  
 routing 과정에서 exception이 발생한다면, 재전송이나 error handling 없이 caller에게 exception을 알려준 후 routing 바로 종료한다.
