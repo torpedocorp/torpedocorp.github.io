@@ -53,23 +53,25 @@ routing 과정에서 exception이 발생한다면, 재전송이나 error handlin
 	
 #### 3. Redelivery (재전송)
 
-Option | Type | Default | Description
----- | ---- | ---- | ----
-MaximumRedeliveries | int | 0 | 재전송 횟수 (-1 : 성공할 때까지 무한 재전송)
-RedeliveryDelay | long | 1000 | 재전송 시도 사이의 delay 시간 (고정값)
-MaximumRedeliveryDelay | long | 60000 | 상한 redelivery 시간
-AsyncDelayRedelivery | boolean | false | Camel의 asynchronous delayed redelivery 사용 여부
-BackoffMultiplier | double | 2.0 | Starting delay 시간을 제외한 재전송 delay 시간
-CollisionAvoidanceFactor | double | 0.15 | Random delay offset
-DelayPattern | String | - | Group 별로 고정된 delay 시간
-RetryAttemptedLogLevel | LoggingLevel | DEBUG | 재전송 시도가 실행되었을 때 log level
-RetriesExhaustedLogLevel | LoggingLevel | ERROR | 재전송 시도가 실패되었을 때 log level
-LogStackTrace | boolean | true | 모든 재전송 시도가 실패되었을 때의 stackTrace logged 여부
-LogRetryStackTrace | boolean | false | Delivery가 실패했을 때의 stackTrace logged 여부
-LogRetryAttempted | boolean | true | 재전송 시도 logged 여부
-LogExhausted | boolean | true | 모든 재전송이 실패되었을 때의 logged 여부
-LogHandled | boolean | false | Handled exception의 logged 여부
-※ DefaultErrorHandler를 포함한 모든 error handler의 redelivey option으로 사용 가능
+
+
+| Option | Type | Default | Description |
+| ---- | ---- | ---- | ---- |
+| MaximumRedeliveries | int | 0 | 재전송 횟수 (-1 : 성공할 때까지 무한 재전송) |
+| RedeliveryDelay | long | 1000 | 재전송 시도 사이의 delay 시간 (고정값) |
+| MaximumRedeliveryDelay | long | 60000 | 상한 redelivery 시간 |
+| AsyncDelayRedelivery | boolean | false | Camel의 asynchronous delayed redelivery 사용 여부 |
+| BackoffMultiplier | double | 2.0 | Starting delay 시간을 제외한 재전송 delay 시간 |
+| CollisionAvoidanceFactor | double | 0.15 | Random delay offset |
+| DelayPattern | String | - | Group 별로 고정된 delay 시간 |
+| RetryAttemptedLogLevel | LoggingLevel | DEBUG | 재전송 시도가 실행되었을 때 log level |
+| RetriesExhaustedLogLevel | LoggingLevel | ERROR | 재전송 시도가 실패되었을 때 log level |
+| LogStackTrace | boolean | true | 모든 재전송 시도가 실패되었을 때의 stackTrace logged 여부 |
+| LogRetryStackTrace | boolean | false | Delivery가 실패했을 때의 stackTrace logged 여부 |
+| LogRetryAttempted | boolean | true | 재전송 시도 logged 여부 |
+| LogExhausted | boolean | true | 모든 재전송이 실패되었을 때의 logged 여부 |
+| LogHandled | boolean | false | Handled exception의 logged 여부 |
+※ DefaultErrorHandler를 포함한 모든 error handler의 redelivey option으로 사용 가능 |
 
 
 ```xml
