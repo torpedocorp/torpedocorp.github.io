@@ -11,6 +11,7 @@ tags: [Camel, Error Handling, <onException>, <handled>, <continued>, <onWhen>]
 모든 exception이 아닌, 특정 exception에 대하여 처리하고 싶을 때 정의
 Syntax : \<onException>
 주로 error handler(defaultErrorHandler, Dead Letter Channel)와 같이 결합하여 사용
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -59,6 +60,7 @@ Syntax : \<onException>
   </route>
 </camelContext>
 ```
+
 \<onException>은 다른 error handler보다 우선 순위가 높다.
 ex) defaultErrorHandler와 java.lang.Exception을 감지하는 onException, 2개가 정의 되어 있는데 java.lang.Exception이 발생한다면 \<onException> 구문이 실행된다.
 
@@ -82,7 +84,7 @@ ex) defaultErrorHandler와 java.lang.Exception을 감지하는 onException, 2개
 ```
 
 If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processing 중 FileNotFoundException 발생했다면 어떤 \<onException> 구문이 실행되는가?
-![gap_detection](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/gap_detection.png)
+![gap_detection](/images/camel-error-handling/gap_detection.png)
 
 ①	 FileNotFoundException과 정확하게 일치하는 \<onException> 존재하지 않는다. 그렇다면 “gap detection”으로 실행된 구문을 결정한다.
 ②	 java.io.FileNotFoundException과 java.io.IOException과의 gap은 1, java.lang.Exception는 gap=2이다.
@@ -92,6 +94,7 @@ If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processi
 #### 2. Redelivery(redeliveryPolicy)
 \<onException>에서는 재전송에 대한 default는 0으로 설정 (재전송 X)
 재전송하고자 한다면 redeliveryPolicy를 통해 재전송 설정
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -121,7 +124,8 @@ If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processi
 #### 3. \<handled>
 (default) handled=false
 “handled=true”로 설정하게 되면 Camel이 제공하는 것이 아닌, 원하는 custom response를 caller에게 보낼 수 있다.
-![handled](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/handled.png)
+![handled](/images/camel-error-handling/handled.png)
+
 ```xml
 <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
   <onException>
@@ -142,7 +146,8 @@ If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processi
 “continued=true”를 사용하게 된다면 exception이 발생하더라도 무시하고 기존 routing 진행
 \<onException>을 쓰지 않고 continue 기능을 사용하고 싶다면, try/catch/finally을 이용해야 한다.
 주의점 : 하나의 \<onException>에 handled와 continued를 같이 사용할 수 없다.
-![continued](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/continued.png)
+![continued](/images/camel-error-handling/continued.png)
+
 ```xml
 <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
   <onException>
@@ -160,6 +165,7 @@ If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processi
 
 #### 5. \<onWhen>
 \<onWhen>과 \<onException>을 같이 사용한다면, exception 발생과 더불어 \<onWhen> 조건에 맞는 case에만 실행
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -187,4 +193,5 @@ If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processi
   </camelContext>
 </bean>
 ```
+
 * java.io.IOException 발생했을 때, header에서의 size가 null일 때만 \<onException> 구문 실행한다. 만약, java.io.IOException이 발생하여도 header.size가 null이 아니라면 실행되지 않는다.
