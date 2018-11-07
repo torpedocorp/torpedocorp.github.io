@@ -4,9 +4,9 @@ title: Error Handling - onException
 tags: [Camel, Error Handling, <onException>, <handled>, <continued>, <onWhen>]
 ---
 
-### Error Handling - oneException
+### Error Handling - onException
 
-###onException
+### onException
 #### 1. onException이란?
 모든 exception이 아닌, 특정 exception에 대하여 처리하고 싶을 때 정의
 Syntax : \<onException>
@@ -43,6 +43,7 @@ Syntax : \<onException>
 
 1. 특징
 하나의 \<onException>에 여러 개의 exception을 정의할 수 있다.
+
 ```xml
 <camelContext id="camel" errorHandlerRef="myDefault" xmlns="http://camel.apache.org/schema/spring"> 	
   <errorHandler id="myDefault" type="DefaultErrorHandler">
