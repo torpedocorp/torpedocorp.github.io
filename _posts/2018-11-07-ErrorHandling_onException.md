@@ -5,8 +5,6 @@ tags: [Camel, Error Handling, <onException>, <handled>, <continued>, <onWhen>]
 ---
 
 ### Error Handling - onException
-
-### onException
 #### 1. onException이란?
 모든 exception이 아닌, 특정 exception에 대하여 처리하고 싶을 때 정의
 Syntax : \<onException>
@@ -40,7 +38,7 @@ Syntax : \<onException>
 * routing 도중 java.io.IOException이 발생하게 되면, \<onException> 구문에서 처리한다.
 * java.io.IOException을 제외한 다른 exception이 발생한다면, 그 exception은 \<onException>이 아닌 DefaultErrorHandler인 ```myDefault```에서 처리한다.
 
-1. 특징
+1. 특징  
 하나의 \<onException>에 여러 개의 exception을 정의할 수 있다.
 
 ```xml
@@ -64,7 +62,7 @@ Syntax : \<onException>
 \<onException>은 다른 error handler보다 우선 순위가 높다.
 ex) defaultErrorHandler와 java.lang.Exception을 감지하는 onException, 2개가 정의 되어 있는데 java.lang.Exception이 발생한다면 \<onException> 구문이 실행된다.
 
-2. 실행 원리
+2. 실행 원리  
 발생한 exception을 \<onException> 구문과 비교할 때, exception의 상속 구조대로 밑→위로 올라가면서 하나씩 비교해 일치하는 exception이 있는지 비교한다.
 발생한 exception에 대해 상속 구조에 포함된 onException이 2개 이상 존재한다면, 발생하는 exception과 정확하게 일치하는 것을 먼저 handling하고, 완전히 일치하는 것이 없다면, “gap detection” 이용하여 실행할 어떤 \<onException>을 실행할 것인지 판단한다.
 
@@ -86,9 +84,9 @@ ex) defaultErrorHandler와 java.lang.Exception을 감지하는 onException, 2개
 If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processing 중 FileNotFoundException 발생했다면 어떤 \<onException> 구문이 실행되는가?
 ![gap_detection](/images/camel-error-handling/gap_detection.png)
 
-①	 FileNotFoundException과 정확하게 일치하는 \<onException> 존재하지 않는다. 그렇다면 “gap detection”으로 실행된 구문을 결정한다.
-②	 java.io.FileNotFoundException과 java.io.IOException과의 gap은 1, java.lang.Exception는 gap=2이다.
-③	 java.io.IOException과의 gap이 더 작기 때문에 java.io.IOException 정의된 \<onException> 실행된다.
+① FileNotFoundException과 정확하게 일치하는 \<onException> 존재하지 않는다. 그렇다면 “gap detection”으로 실행된 구문을 결정한다.  
+② java.io.FileNotFoundException과 java.io.IOException과의 gap은 1, java.lang.Exception는 gap=2이다.  
+③ java.io.IOException과의 gap이 더 작기 때문에 java.io.IOException 정의된 \<onException> 실행된다.  
 
 
 #### 2. Redelivery(redeliveryPolicy)
@@ -143,7 +141,7 @@ If) 위와 같은 \<onException> 구문을 정의했는데, route에서 processi
 
 #### 4. \<continued>
 “continued=true”를 사용하게 된다면 exception이 발생하더라도 무시하고 기존 routing 진행
-\<onException>을 쓰지 않고 continue 기능을 사용하고 싶다면, try/catch/finally을 이용해야 한다.
+\<onException>을 쓰지 않고 continue 기능을 사용하고 싶다면, try/catch/finally을 이용해야 한다.  
 주의점 : 하나의 \<onException>에 handled와 continued를 같이 사용할 수 없다.
 ![continued](/images/camel-error-handling/continued.png)
 
