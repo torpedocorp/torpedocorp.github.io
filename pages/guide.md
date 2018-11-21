@@ -3,7 +3,7 @@ layout: page
 title: Guide
 subtitle: Guidebook of Camel ESB
 permalink: /guide/
-gallery_path: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/computer.jpeg"
 tags: [Camel, ESB]
 ---
 

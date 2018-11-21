@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/computer.jpeg"
+feature-img: "assets/img/pexels/circuit.jpeg"
 tags: [토피도, torpedo]
 ---
 
