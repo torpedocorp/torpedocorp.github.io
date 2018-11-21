@@ -2,11 +2,11 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/computer.jpeg"
 tags: [토피도, torpedo]
 ---
 
-토피도는 기술과 사람을 아는 회사입니다. 
+토피도는 기술과 사람을 아는 회사입니다.
 
 
 홈페이지  [www.torpedo.co.kr](http://www.torpedo.co.kr)  
