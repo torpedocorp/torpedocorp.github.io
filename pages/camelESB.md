@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CamelESB
+title: CamelESB란
 permalink: /camelesb/
 feature-img: "assets/img/pexels/search-map.jpeg"
 tags: [Camel, ESB]
