@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Torpedo
 permalink: /about/
 feature-img: "assets/img/pexels/circuit.jpeg"
 tags: [토피도, torpedo]
