@@ -1,0 +1,164 @@
+---
+layout: post
+title: Apache Camel - CXF
+tags: [Camel, CXF, WSDL, Contract-first, Code-first]
+---
+
+### Apache Camel - CXF Component
+#### 1. CXF란?
+Camel에서 web service 이용하기 위해서 사용한다.
+WSDL 이용하여 정의한다.
+Apache CXF 이용하여 web service publishing하는데, 이때 JAX-WS를 이용한다.
+
+![cxf](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/cxf.png)
+WSDL로 구성된 message는 XML로 구성되어 있다.
+SOAP/HTTP 이용하여 전송
+
+##### [CXF component Option]
+| Option | Type | Default |
+| ---- | ---- | ---- |
+| wsdlURL |  | WSDL 위치 |
+| serviceClass |  | SEI class |
+| serviceName |  | WSDl에 1개 이상의 serviceName이 존재했을 때 설정 필요 |
+| portName |  | WSDL 위치 |
+| dataFormat | POJO | WSDL 위치 |
+※ serviceClass는 필수적으로 작성해줘야 한다.
+
+##### [CXF URI]
+CXF endpoint bean으로 사용
+cxf:bean:[CXF 정의한 bean 이름]
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+
+	<bean id="jetty" class="org.apache.camel.component.jetty9.JettyHttpComponent9">
+	</bean>
+
+	<cxf:cxfEndpoint id="HelloServiceEndpoint"
+		serviceClass="kr.co.bizframe.camel.cxf.client.HelloPortType"
+		address="http://localhost:10040/helloService">
+	</cxf:cxfEndpoint>
+
+	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+		<route>
+			<from uri="file://d:/camel/input/src?move=done&amp;moveFailed=fail&amp;delay=2000" />
+			<to uri="cxf:bean:HelloServiceEndpoint" />
+		</route>
+	</camelContext>
+</beans>
+```
+Camel route에서 CXF를 이용하기 위해 cxf bean 이름(```HelloServiceEndpoint```), serviceClass(```kr.co.bizframe.camel.cxf.client.HelloPortType```) 정의  
+\<route> 안에서는 ```cxf:bean:HelloServiceEndpoint```로 uri 지정
+
+#### 2. WSDL
+Web Service Description Language
+네트워크로 연결된 XML 기반 서비스를 기술하는 새로운 스펙
+웹서비스에서 사용하기 위해서는 지켜야 하는 구조(operations, input type, output type) 정의
+
+##### [구조]
+* Type
+웹서비스에서 사용할 data type
+XML schema 이용
+name과 각 parameter type 명시
+* Message
+웹서비스에서 사용할 message
+* portType
+웹서비스에서 드러날 interface name, operation
+* Binding
+Transport 타입, message encoding
+* Service
+웹서비스에 대해서 정의
+웹서비스를 드러낼 port binding
+
+##### [Format]
+![WSDL](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/WSDL.png)
+* \<wsdl:definitions>
+WSDL은 \<wsdl:definitions>로 시작해 \<wsdl:definitions>로 끝난다.
+WSDL의 모든 문서는 \<wsdl:definitions> 구문으로 묶는다.
+* \<wsdl:types>
+사용할 메시지/데이터 형식 정의
+* \<wsdl:message>
+각 개별로 전송하는 message 데이터 포맷 저으이
+전송을 메시지 부분들로 나누는 것은 데이터 논리적 뷰에 의존
+* \<wsdl:portType>
+하나의 논리적 연산을 형성하는 메시지들을 grouping
+ex) 하나의 리소스에 필요한 input, output, fault를 처리하는 각 메시지를 하나의 연산으로 grouping하여 이용
+* \<wsdl:bindings>
+논리적 모델과 물리적 모델 사이에 연결 제공
+추상적 포트 유형을 통해 정의했던 연산을 사용하여 구체적으로 연결
+* \<wsdl:service>
+End point 물리적 위치 지정
+Port 유형과 binding을 상용하고 특정 공급자용 웹 주소/URI 부여
+
+#### 3. Contract-first approach
+CXF component 정의하는 방법
+1.	Contract-first development
+2.	Code-first development
+
+WSDL file을 먼저 생성 → CXF 통하여 WSDL에서 Java class 생성하여 이용
+![contract-first-development](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/contract-first-development.png)
+
+CXF endpoint 정의하여 Camel에서 CXF component 사용
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+  <!--camel-cxf 사용하기 위한 cxf/camel-cxf 추가 -->
+
+	<bean id="jetty" class="org.apache.camel.component.jetty9.JettyHttpComponent9">
+	</bean>
+
+	<cxf:cxfEndpoint id="HelloServiceEndpoint"
+		serviceClass="kr.co.bizframe.camel.cxf.client.HelloPortType"
+		address="http://localhost:10040/helloService">
+	</cxf:cxfEndpoint>
+
+	<camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+		<route>
+			<from uri="file://d:/camel/input/src?move=done&amp;moveFailed=fail&amp;delay=2000" />
+			<to uri="cxf:bean:HelloServiceEndpoint" />
+		</route>
+    <!-- route에 cxf endpoint 정의하여 camel route에서 web service를 이용할 수 있도록 설정 -->
+	</camelContext>
+</beans>
+```
+If, 단 1개의 \<cxf:cxfEndpiint>가 정의되어 있다면, CXF가 자동으로 선택해준다.
+If, 2개 이상의 \<cxf:cxfEndpoint>가 정의되어 있다면, serviceName(WSDL service element name)과 endpointName(port element name)를 이용하려는 endpoint bean에 정의해야 한다.
+
+#### 4. Code-first approach
+Java Interface class 구현 → CXF 이용하여 WSDL 생성 후 사용
+Java class 구현할 때는 JAX-WS annotation 이용
+![contract-first-development](C:/Users/NaYoung/Documents/Markdown/Camel-ESB/contract-first-development.png)
+
+* 순서
+ⅰ. 사용할 method, type, parameter 정의
+ⅱ. 웹 서비스로 이용할 Interface 생성
+ⅲ. 웹 서비스 class에 request/response 구현
+ⅳ. Camel-route에 cxf component 정의 후, 사용
+```java
+@WebService(targetNamespace="http://server.hello.cxf.camel.bizframe.co.kr/", name="HelloPortType")
+@XmlSeeAlso({ObjectFactory.class})
+public interface HelloPortType{
+
+  @WebMethod
+  @RequestWrapper(localName = "sayHello", targetNamespace = "http://server.hello.cxf.camel.bizframe.co.kr/", className = "kr.co.bizframe.camel.cxf.hello.client.SayHello")
+  @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://server.hello.cxf.camel.bizframe.co.kr/", className = "kr.co.bizframe.camel.cxf.hello.client.SayHelloResponse")
+  @WebResult(name = "return", targetNamespace = "http://server.hello.cxf.camel.bizframe.co.kr/")
+    public java.lang.String sayHello(
+      @WebParam(name = "arg1", targetNamespace = "http://server.hello.cxf.camel.bizframe.co.kr/")
+        java.lang.String arg1
+    );
+}
+```
+JAX-WS annotation 이용하여 CXF에게 어떤 class가 웹 서비스 Interface인지 알려준다.
