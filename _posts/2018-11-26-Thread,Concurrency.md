@@ -103,6 +103,9 @@ executorServiceRef 이용하여 어떤 thread pool을 사용할 것인지 설정
 Thread pool 이용하여 concurrency 구현
   → \<threadPool>, \<threadPoolProfile>
 Apache Camel의 ```file component```를 Threads EIP에서 가장 많이 사용한다.  
+
+<br/>
+
 ② Multicast EIP
 
 ![thread_pools](/images/thread/multicast.png)
@@ -122,6 +125,9 @@ Multicast EIP에서 concurrency를 사용하지 않는다면, camel route는 정
   </route>
 </camelContext>
 ```
+
+<br/>
+
 ③ Wire Tap EIP
 
 ![thread_pools](/images/thread/wire-tap.png)
