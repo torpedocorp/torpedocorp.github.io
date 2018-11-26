@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Apache Camel - Thread,Concurrency
+title: Thread & Concurrency
 tags: [Camel, Thread, thread pool, <threadPool>, <threadPoolProfile>, Multicast EIP, Splitter EIP, wire-tap EIP]
 ---
 
-### Apache Camel - Thread
+### Thread & Concurrency in Camel
 
 #### 1. Concurrency
 Concurrency는 곧 multitasking을 말한다. 동시에 여러 작업을 진행하는 것을 뜻한다.
