@@ -18,7 +18,7 @@ tags: [Camel, ESB]
 
 | 목차 | 세부목차 | 설명 | Page |
 | :---: | --- | --- | --- |
-| Bizframe-MAS 서버 | 개념 | MAS 기본구조, 특징 | p5 |
+| Bizframe-MAS | 개념 | MAS 기본구조, 특징 | p5 |
 | · | 설치 | OS 따라 MAS 설치 방법 | p8 |
 | · | 파일 구조 | 디렉토리 구조와 각 디렉토리에 존재하는 파일 설명 | p10 |
 | · | Bizframe-MAS 운영 설정 | MAS와 MAS application 구성, 설정 | p13 |
