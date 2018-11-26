@@ -160,7 +160,7 @@ Processing 과정이 수행 중, 종료되기 전에 새로운 message를 생성
 </beans>
 ```
 
-④ Splitter EIP
+④ Splitter EIP  
 Message를 분할하여 각각 processing을 진행할 때 concurrency 필요
 threadPool 이용하여 concurrency 구현
 split option 중 executorServiceRef 통해 custom thread pool 정의, 사용  
