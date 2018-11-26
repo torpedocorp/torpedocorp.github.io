@@ -12,7 +12,7 @@ Camel에서는 route 안에서 여러 messages들을 동시에 수행할 수 있
 * Concurrency 구현 방법  
 ⅰ. ParallelProcessing
 Parallel processing 지원하는 EIP는 multicast, recipient, splitter, list, wire tap, error handler 등이 존재한다.
-parallelProcessing=true로 활성화하여 사용한다.
+parallelProcessing=true로 활성화하여 사용한다.  
 ⅱ. Thread pool
 Thread pool에는 2가지 종류가 있다. (cached thread pool/fixed thread pool)
 * Cached thread pool
