@@ -102,7 +102,7 @@ executorServiceRef 이용하여 어떤 thread pool을 사용할 것인지 설정
 ① Threads EIP
 Thread pool 이용하여 concurrency 구현
   → \<threadPool>, \<threadPoolProfile>
-Apache Camel의 ```file component```를 Threads EIP에서 가장 많이 사용한다.
+Apache Camel의 ```file component```를 Threads EIP에서 가장 많이 사용한다.  
 ② Multicast EIP
 ![thread_pools](/images/thread/multicast.png)
 
@@ -155,7 +155,7 @@ Processing 과정이 수행 중, 종료되기 전에 새로운 message를 생성
 ④ Splitter EIP
 Message를 분할하여 각각 processing을 진행할 때 concurrency 필요
 threadPool 이용하여 concurrency 구현
-split option 중 executorServiceRef 통해 custom thread pool 정의, 사용
+split option 중 executorServiceRef 통해 custom thread pool 정의, 사용  
 	→ 이 option을 사용하게 되면, parallel processing은 자동으로 들어가게 된다.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
