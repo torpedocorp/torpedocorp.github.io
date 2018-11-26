@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Manual
-subtitle: Camel ESB 매뉴얼
+subtitle: Camel ESB 뉴얼
 permalink: /manual/
 feature-img: "assets/img/pexels/computer2.jpeg"
 tags: [Camel, ESB]
 ---
 
-## 매뉴얼(Camel ESB Manual)
+## 메뉴얼(Camel ESB Manual)
 
 ### 링크
 
