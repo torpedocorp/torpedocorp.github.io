@@ -10,6 +10,8 @@ tags: [Camel, ESB]
 * 오픈소스 Apache Camel을 이용한 ESB 시스템
 * MSA를 지원하여 유연한 대처가 가능한 아키텍처 구현
 
+<br/>
+
 ### ESB
 * application을 독립적인 개별 서비스로 나누어 구성한 아키텍처
 
