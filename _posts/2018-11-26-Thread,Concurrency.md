@@ -33,13 +33,14 @@ Task queue로부터 task 꺼내어 thread pool에 넣고 실행하는 구조
 
 Ⅱ. Option
 
-Option | Default | Description
----- | ---- | ----
-poolSize | 10 | thread pool 개수
-maxPoolSize | 20 | 최대 thread pool 개수
-keepAlivetime | 60 | 종료된 후 thread 유지 시간
-maxQueueSize | 1000 | Pool exhausted 되기 전 task queue가 넣을 수 있는 task 개수
-rejectedPolicy | CallerRuns | (option) CallerRuns/Abort/DiscardOlddest, Discard
+| Option | Default | Description |
+| ---- | ---- | ---- |
+| poolSize | 10 | thread pool 개수 |
+| maxPoolSize | 20 | 최대 thread pool 개수 |
+| keepAlivetime | 60 | 종료된 후 thread 유지 시간 |
+| maxQueueSize | 1000 | Pool exhausted 되기 전 task queue가 넣을 수 있는 task 개수 |
+| rejectedPolicy | CallerRuns | (option) CallerRuns/Abort/DiscardOlddest, Discard |
+
 * rejectedPolicy option
   - CallerRuns : Thread에 가장 최근에 들어온 task부터 실행
   부작용 : 가장 최근에 들어온 task 끝나기 전에는 다른 tasks가 들어오는 것을 막는다.
@@ -50,6 +51,7 @@ rejectedPolicy | CallerRuns | (option) CallerRuns/Abort/DiscardOlddest, Discard
 Ⅲ. 어떻게 thread pool을 만들어서 사용하는가?
 \<threadPool>, \<threadPoolProfile> 이용해서 custom thread pool을 생성한다.
 * \<threadPool>
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -71,8 +73,10 @@ rejectedPolicy | CallerRuns | (option) CallerRuns/Abort/DiscardOlddest, Discard
 	</camelContext>
 </beans>
 ```
+
 주의점 : ```threadName```은 꼭 명시해줘야 한다.
 * \<threadPoolProfile>
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -94,6 +98,7 @@ rejectedPolicy | CallerRuns | (option) CallerRuns/Abort/DiscardOlddest, Discard
 	</camelContext>
 </beans>
 ```
+
 executorServiceRef 이용하여 어떤 thread pool을 사용할 것인지 설정
 → 만약 executorServiceRef에 설정한 thread가 없다면 fall-back 한 뒤, 그 이름으로 정의된 thread profile이 있는지 찾아본다. 있다면, 해당 profile을 기반으로 thread pool을 만든 뒤 사용
 주의점 : \<threadPool>과 다르게, ```threadName``` option을 사용할 수 없다.
