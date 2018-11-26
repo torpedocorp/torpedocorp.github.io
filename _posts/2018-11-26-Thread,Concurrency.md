@@ -164,6 +164,7 @@ Processing 과정이 수행 중, 종료되기 전에 새로운 message를 생성
 	</camelContext>
 </beans>
 ```
+<br/>
 
 ④ Splitter EIP  
 Message를 분할하여 각각 processing을 진행할 때 concurrency 필요
