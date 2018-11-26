@@ -9,7 +9,7 @@ tags: [Camel, Thread, thread pool, <threadPool>, <threadPoolProfile>, Multicast 
 #### 1. Concurrency
 Concurrency는 곧 multitasking을 말한다. 동시에 여러 작업을 진행하는 것을 뜻한다.
 Camel에서는 route 안에서 여러 messages들을 동시에 수행할 수 있도록 제공해준다.
-* Concurrency 구현 방법
+* Concurrency 구현 방법  
 ⅰ. ParallelProcessing
 Parallel processing 지원하는 EIP는 multicast, recipient, splitter, list, wire tap, error handler 등이 존재한다.
 parallelProcessing=true로 활성화하여 사용한다.
