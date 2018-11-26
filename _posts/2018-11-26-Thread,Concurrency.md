@@ -99,11 +99,12 @@ executorServiceRef 이용하여 어떤 thread pool을 사용할 것인지 설정
 주의점 : \<threadPool>과 다르게, ```threadName``` option을 사용할 수 없다.
 
 #### 3. Using concurrency with EIPs
-① Threads EIP
+① Threads EIP  
 Thread pool 이용하여 concurrency 구현
   → \<threadPool>, \<threadPoolProfile>
 Apache Camel의 ```file component```를 Threads EIP에서 가장 많이 사용한다.  
 ② Multicast EIP
+
 ![thread_pools](/images/thread/multicast.png)
 
 Multicast EIP에서 concurrency를 사용하지 않는다면, camel route는 정의한 순서대로 수행하기 때문에 오랜 시간 소요
@@ -122,6 +123,7 @@ Multicast EIP에서 concurrency를 사용하지 않는다면, camel route는 정
 </camelContext>
 ```
 ③ Wire Tap EIP
+
 ![thread_pools](/images/thread/wire-tap.png)
 
 Processing 과정이 수행 중, 종료되기 전에 새로운 message를 생성하여 보내고 싶을 때 사용
