@@ -20,7 +20,7 @@ Thread pool에는 2가지 종류가 있다. (cached thread pool/fixed thread poo
 Parallel processing보다 속도가 빠르다는 장점이 있지만, thread pool의 최대 thread 개수가 정해져있지 않기 때문에 task가 많아질수록 thread 개수는 계속해서 생성하게 되고, 결국 과부하로 이어질 가능성이 있다.
 * Fixed thread pool
 Thread 개수가 정해져 있는 thread pool
-제한된 threads를 가지고 진행
+제한된 threads를 가지고 진행  
 ⅲ. SEDA component
 
 
