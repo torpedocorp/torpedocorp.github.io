@@ -7,6 +7,8 @@ excerpt_separator: <!--more-->
 
 
 ## hawtio - Jolokia - JMX
+<!--more-->
+
 ![](http://3.bp.blogspot.com/-DFtaudeSNxo/UkmADhuA9HI/AAAAAAAAA3w/PbOCNOwEaJ4/s1600/Karaf_JMX.png)
 
  
